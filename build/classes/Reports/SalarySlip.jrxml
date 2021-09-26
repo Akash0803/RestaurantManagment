@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalarySlip" pageWidth="300" pageHeight="842" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DomDataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="p1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from salarypay where employeeID= $P{p1} ]]>
+	</queryString>
+	<field name="SalaryNo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="SalaryNo"/>
+		<property name="com.jaspersoft.studio.field.label" value="SalaryNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarypay"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employeeID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="employeeID"/>
+		<property name="com.jaspersoft.studio.field.label" value="employeeID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarypay"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarypay"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Status"/>
+		<property name="com.jaspersoft.studio.field.label" value="Status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarypay"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pdate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="Pdate"/>
+		<property name="com.jaspersoft.studio.field.label" value="Pdate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarypay"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NetSalary" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NetSalary"/>
+		<property name="com.jaspersoft.studio.field.label" value="NetSalary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarypay"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="512" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="80" width="260" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="65" width="50" height="15" uuid="0f86baff-6386-4f3f-b3fe-2388707babe8"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="50" y="65" width="130" height="15" uuid="bb10dbe1-0a4f-4722-9953-c163b63cf979"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="210" height="25" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary Pay Slip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="25" width="167" height="20" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Domino's Pizza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="150" height="15" uuid="b96f7183-44f8-43ad-ba60-43d8fbf50b6e"/>
+				<text><![CDATA[Kolhapur Naka Karad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="164" width="92" height="20" forecolor="#000000" uuid="f724a53d-a0da-4f72-8629-9acb900e41fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fca950b-a9b8-4b24-9ad1-5af009a396c0"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employeeID]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="100" y="164" width="92" height="20" uuid="5221f558-cff2-41e7-a34d-a23aa21f59e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fca950b-a9b8-4b24-9ad1-5af009a396c0"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="3" y="130" width="92" height="20" forecolor="#000000" uuid="16f64aef-05a0-48d9-8066-f61f09982e33">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5aa5aa8-48af-4fd8-a0a1-fd8e087bec75"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="100" y="130" width="150" height="20" uuid="a4172ecd-220e-4b56-b905-dbe65d1ed186">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5aa5aa8-48af-4fd8-a0a1-fd8e087bec75"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="3" y="194" width="92" height="20" forecolor="#000000" uuid="da922d35-748b-47a4-b47c-153739f9d0d1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19bf8351-a66c-4e8d-82d4-b92bd0088d64"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid date]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="100" y="194" width="150" height="20" uuid="9641267f-b62a-49c1-ab2d-c83808716fea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19bf8351-a66c-4e8d-82d4-b92bd0088d64"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Pdate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="250" width="257" height="3" uuid="d82d40cc-a2dd-4298-acdd-1d7cfcb0d279">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="3" y="104" width="92" height="20" forecolor="#000000" uuid="b2ff2866-d6f0-434c-af5d-97cda21a3ae7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e620f51c-01f2-43ec-939d-a6614f256b0e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SalaryNo]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="100" y="104" width="150" height="20" uuid="ade20ebe-7578-439a-bad1-f205a7b67531">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e620f51c-01f2-43ec-939d-a6614f256b0e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SalaryNo}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="3" y="290" width="250" height="220" uuid="45207309-5c49-4e8d-9d65-b6279fd1c863">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<subreportParameter name="p1">
+					<subreportParameterExpression><![CDATA[$P{p1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["SalaryChild.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="3" y="224" width="92" height="20" forecolor="#000000" uuid="8595a284-6751-4b9d-904d-83ff07d81563">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c9d099a-500e-475b-b253-31368d7a1d99"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="100" y="224" width="120" height="20" uuid="2c447424-ee21-4e8f-b616-7504298aa4e7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c9d099a-500e-475b-b253-31368d7a1d99"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Status}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="30" y="260" width="180" height="20" forecolor="#000000" uuid="b0f02026-90ae-40d0-afd4-56ef5ea16bde">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c9d099a-500e-475b-b253-31368d7a1d99"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary Details]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>
